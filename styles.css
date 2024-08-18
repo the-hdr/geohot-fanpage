@@ -51,6 +51,9 @@ body, html
     justify-content: center;
     align-items: center;
     gap: 2rem;
+
+    display: flex;
+    flex-direction: row;
 }
 
 .welcome-heading
@@ -124,6 +127,9 @@ body, html
 {
     gap: 2rem;
     display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card-of-fame img
@@ -133,12 +139,6 @@ body, html
     object-fit: cover;
     border: 2px solid #3882F6;
     border-radius: 15px;
-}
-
-.cards-of-fame
-{
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .card-of-fame
@@ -228,3 +228,33 @@ body, html
     color: white;
 }
 
+
+/* when the screen is smol: */
+
+@media (max-width: 700px)
+{
+    .introduction
+    {
+        flex-direction: column;
+    }
+
+    .intro-image
+    {
+        width: 100%;
+    }
+
+    .intro-text
+    {
+        width: 100%;
+    }
+/* 
+    .intro-image
+    {
+        width: 80vw;
+    } */
+
+    /* to do: make the image shrink in
+       proportion to the screen size;
+       at the same time ensure that the text
+       above it takes the same width; */
+}
